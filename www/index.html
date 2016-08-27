@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8">
+ <title>Pedidos</title>
+ <link rel="stylesheet" href="icons/material.css">
+ <link rel="stylesheet" href="css/materialize.min.css">
+ <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body> 
+<div class="topo-fixo z-depth-1">
+		<div class="valign-wrapper yellow darken-4 white-text">
+			<h5 class="titulo">Pedidos</h5>
+				<div>
+					<i class="material-icons waves-effect waves-light waves-circle dropdown-button" data-activates="submenu" data-gutter="5" data-constrainwidth="false"> more_vert
+					</i>
+					<!-- Botao limpar  !--> 
+					<ul id="submenu" class="dropdown-content">
+						<li><a class="black-text acao-limpar">Limpar</a></li>
+					</ul>
+				</div>
+		</div>
+
+
+	 <ul class="tabs yellow darken-4">
+		 <li class="tab">
+			<a href="#doces" class="black-text waves-effect waves-light">Doces</a>
+		 </li>
+		 <li class="tab">
+			<a href="#bebidas"class="black-text waves-effect waves-light">Bebidas</a>
+		 </li>
+	 </ul>
+	 <!-- aba doces  !--> 
+	<div id="doces" class="section">
+	<h6 class="container brown-text">Doces</h6>
+		<div class="collection">
+			<a class="collection-item waves-effect black-text">Pudim de leite</a>
+			<a class="collection-item waves-effect black-text">Donut</a>
+			<a class="collection-item waves-effect black-text">Cocada</a>
+			<a class="collection-item waves-effect black-text">Brigadeiro</a>
+		</div>
+		<!-- adicionar mais sessoes para doces !-->
+	</div>
+	<!-- aba bebidas  !--> 
+	<div id="bebidas" class="section">
+				<div id="bebidas" class="section">
+					<!-- sessao cafes  !--> 
+					<h6 class="container brown-text">Cafés</h6>
+					<div class="collection">
+						<a class="collection-item waves-effect black-text">Espresso</a>
+						<a class="collection-item waves-effect black-text">Capuccino</a>
+						<a class="collection-item waves-effect black-text">Mocachino</a>
+					</div>
+				</div>
+			 <!-- sessao refrigerantes  !--> 
+		<h6 class="container brown-text">Refrigerantes</h6>
+			<div class="collection">
+				<a class="collection-item waves-effect black-text">Soda</a>
+				<a class="collection-item waves-effect black-text">Guaraná</a>
+				<a class="collection-item waves-effect black-text">Coca</a>
+			</div>
+			<!-- sessao sucos  !--> 
+		<h6 class="container brown-text">Sucos</h6>
+			<div class="collection">
+				<a class="collection-item waves-effect black-text">Melancia</a>
+				<a class="collection-item waves-effect black-text">Tangerina</a>
+				<a class="collection-item waves-effect black-text">Limão</a>
+			</div>
+	</div>
+	<!-- Botao confirmar  !--> 
+	<div class="fixed-action-btn">
+			<a class="btn-floating btn-large waves-effect
+			waves-light brown modal-trigger"
+			href="#confirmacao" id="confirmar">
+			<i class="material-icons">OK</i>
+		</a>
+	</div>
+</div>
+	<!-- modal tela pedido  !-->
+	<div id="confirmacao" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5>Resumo do pedido</h5>
+			<input id="numero-mesa" type="number"class="validate" placeholder="Número da mesa">
+			<blockquote id="resumo"></blockquote>
+		</div>
+		<div class="modal-footer">
+			<button class="btn deep-orange waves-effect waves-light	modal-close">Pedir</button>
+			<button class="btn-flat waves-effect waves-red modal-close acao-limpar">Cancelar</button>
+		</div>
+	</div>
+
+<!-- adicionar JS !--> 
+ <script src="js/jquery.min.js"></script>
+ <script src="js/materialize.min.js"></script>
+ <script src="js/app.js"></script>
+ 
+
+</body>
+</html>
